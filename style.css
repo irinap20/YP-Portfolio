@@ -1,0 +1,674 @@
+@font-face {
+    font-family: Quarion;
+    src: url("img/Quarion/Rene\ Bieder\ -\ Quarion\ Book\ DEMO.otf") format("opentype");
+} 
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alegreya&family=Arapey&family=Comforter&family=Lato:wght@100&family=M+PLUS+Rounded+1c:wght@900&family=Open+Sans+Condensed:wght@700&family=PT+Sans&family=Quicksand:wght@300&family=Roboto:wght@100&family=Rozha+One&display=swap');
+*{   margin:0;
+    padding:0;
+} 
+@font-face {
+    font-family: playfair;
+    src: url(img/playfair-display/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: roboto;
+    src: url(img/Roboto_Slab/static/RobotoSlab-Thin.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(img/Lato/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: lato-bold;
+    src: url(img/Lato/Lato-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: lato-thin;
+    src: url(img/Lato/Lato-Thin.ttf);
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+----------------
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+    overflow-x: hidden;
+}
+
+.image{
+    top: 4%;
+    left: 4%;
+    transform: translate(25%, 10%);
+    opacity: 0.7;
+    background-color: black;
+}
+
+#logo-name{
+    font-size: 20pt;
+    font-family: 'Rozha One', serif;  
+    font: weight -100px; 
+}
+
+.container{
+    height:100vh;
+    width: inherit;  
+    padding-left: 5%;
+    padding-right:5%;
+    content: "";
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,  url('img/pls.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    box-sizing: border-box;  
+    position:relative;
+    overflow:hidden;
+} 
+
+.navbar{ 
+    height: 20vh;   
+    align-items: left;   
+    width:960px;
+}
+
+#menu{ 
+  position:fixed;  
+  z-index:1; /*Add this*/ 
+}
+
+.logo{
+    width:  60px;
+    cursor:pointer; 
+    position: absolute;    
+    display: flex;
+    justify-content: flex;  
+    color: white; 
+    top: 2%;
+    transform: translate(0%, 80%);
+}
+
+nav{ 
+    padding-right: 60px;     
+    max-height: 1000px;      
+    width: 960px;;
+}
+ 
+nav ul{       
+    position:absolute; 
+    overflow: hidden;     
+    right: 30% ;
+    top: 5%;
+    transform: translate(100%, 0%);
+}
+
+nav ul li{  
+   list-style: none;
+   margin: 0px 20px;  
+   display: inline-block;
+}
+
+nav a{
+    text-align: right;
+    text-decoration: none;
+    color:  white;
+    font-size: 15px; 
+    font-family: 'Quarion', serif; 
+ }
+
+ nav.dark a {
+    color: black;
+}
+
+ svg {
+     position: absolute; 
+     top: -10%;
+     left: -3%; 
+ } 
+
+ svg.hey text{ 
+    font-family: 'lato';
+    stroke: #ffffff;
+    fill: white;
+    font-size: 50pt;  
+    font-weight: 0;
+    animation: textAnimate 3s infinite alternate; 
+  } 
+  @keyframes textAnimate {
+    from {     
+    stroke-dasharray: 50% 0%;  
+      fill: white ;
+    }
+    
+    to {
+      stroke-dasharray: 0% 50%; 
+      stroke-dashoffstet: -20%;
+      fill: transparent ;
+    }
+}
+    .arrow{
+        position:absolute;
+        top: 70%;
+        left:  50%; 
+        animation: slide1 2s ease-in-out infinite; 
+    }
+     
+    @keyframes slide1{
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+      
+        50% {
+          transform: translate(0px, 10px);
+        }
+    }
+    .arrow span{
+        display: block;
+        width: 30px;
+        height: 30px;  
+        border-bottom: 2px solid white;
+        border-right : 2px solid  white;
+        transform: rotate(45deg);
+        position: absolute;  
+        top: 70%;
+        left:50% 
+    }  
+ 
+     -------------
+.page2{ 
+    height:70vh;
+}
+    .nextpage2{   
+        height: 100vh;;
+    width: inherit;  
+    padding-left: 5%;
+    padding-right:5%;
+    content: ""; 
+    position:relative;
+    overflow:hidden;
+    background-color: white;
+    overflow-x: hidden;
+    }
+
+    .heading{
+        position: relative;  
+        display: flex; 
+        justify-content: center;    
+        width: 1350px; 
+        left: 0px;
+    }
+
+    h1 {   
+        font-family: 'lato-thin';
+        font-size: 40px;  
+        padding-top: 60pt; 
+        color: black;  
+        position:relative; 
+    }  
+
+    .description{    
+        position: relative; 
+       font-family: 'lato';
+       font-size: 14pt;    
+       color: black;
+       padding-left: 280px;
+       padding-top: 150pt;
+    } 
+
+    .uls{
+        position: relative;
+    }
+
+   .uls li{
+        list-style-type: none;    
+        margin-left: 6%;
+        line-height: 30pt;
+    }
+
+    .profile{ 
+        position: relative;
+        left: 45%;
+        margin-bottom: 0pt;
+        top: 150%; 
+    }
+  
+-----------------   
+ #page3{  
+     width: 100vh;;
+ }
+    .experience{ 
+        width: 1460px;  
+        height: 100vh; 
+        box-sizing: border-box;  
+        position:relative; 
+        background-color:rgb(245, 244, 249);
+        overflow-x: hidden;
+    } 
+   
+    h2{
+        font-family: 'Quarion';
+        font-size: 14pt;  
+        margin-top: 10%; 
+        margin-right:7%;
+    }  
+    .p3h1{
+        left: 20%; 
+        font-size: 25pt;
+    }
+
+    .p3h3{
+        font-family: 'lato-thin';
+        font-size: 12pt;  
+        margin-top: 8%;   
+        left: -2%;
+        position: relative;
+    }
+
+    #title{
+        margin-bottom: 10%;
+    }
+ 
+ 
+    .one{  
+        margin-left: 60%;   
+    }
+ 
+
+    .work{
+        list-style-type: none;   
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    .work li{ 
+        margin-top: 20pt;   
+    }
+
+    #description{
+        font-family: 'Quarion';
+        font-size: 10pt;  
+    }
+ 
+.skills{
+    float: left;   
+    margin-left: 10%;   
+    margin-top: -30%;
+ } 
+
+.skills ul{
+    display:inline-block;      
+}
+
+.skills ul li{
+    display: flex; 
+    list-style-type: none;  
+    width: auto; 
+    margin-top: 20pt; 
+} 
+
+.skills-icons{ 
+    width:80px; 
+     z-index:2; 
+     margin-right: 30pt; 
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+     filter: grayscale(100%);
+    }   
+
+    .skills-icons:hover{  
+        -webkit-filter: none;
+        filter: none;
+        }   
+ ----------  
+ #page4{
+    height: 100vh;
+ }
+.projects{ 
+    width: 1350px;  
+    height: 100vh; 
+    box-sizing: border-box;  
+    position:relative;   
+}
+  
+.b{ 
+    height: 30vh; 
+    background-image:  linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) ,url('img/pls.jpg'); 
+    background-attachment: fixed;
+    background-size: cover;    
+}
+
+.bridge{ 
+    position:relative;
+    width: 1390px; 
+}
+
+ .checkout{
+            font-family: 'lato';
+            color: white; 
+            font-size: 20pt; 
+            justify-content: center; 
+            display: flex;    
+            position: relative;
+            left: 3%;
+  }
+
+  h3{ 
+    padding: 20pt;
+  }
+
+       #getCopy{
+            background-color: transparent;
+            border-radius: 0pt; 
+            padding-top: 0; 
+            color: white;
+            padding: 0px 32px;
+            text-align: center;  
+            font-size: 18px;;  
+            border-color: white;
+            box-shadow: none;
+            border-style: solid;
+            font-family:system, -apple-system, BlinkMacSystemFont, sans-serif;
+            left: 48%;
+            height: 25pt;
+            margin-top: 10pt;
+            position: absolute;
+        }
+
+        ------------------------------- 
+          .container2{   
+              min-height: 120vh; 
+              display: flex;
+              align-items: center;
+              overflow-x: hidden;
+          }      
+
+          .gallery{
+              height: 110vh;
+          }
+ 
+          .gh1{
+              left: 42%;
+          }
+
+          .row{  
+	        margin: 0 auto;
+	        padding: 0;
+	        clear: both; 
+          }
+
+          .row ul{ 
+              list-style-type: none;
+          }
+
+          .row img{  
+            height: auto;
+            padding: 0;
+            margin: 0; 
+          }
+
+          .gallery{
+            padding: 40px 0 300px;
+            position: relative;
+            overflow: hidden;
+            left: 3%;
+          }
+          .gallery ul{
+            padding-top: 50px;
+		    position: relative; 
+          }
+
+          .gallery ul li{ 
+            float: left;
+            width: 29.%;
+	         margin: 0 0.8771929824561403%;
+             margin-bottom: -5%;
+        	overflow: hidden;
+			position: relative;  
+          }
+
+          .gallery ul li a {
+            display: block;
+				position: relative; 
+				height: inherit;
+                width: 100%;
+				margin-right: 0;
+				padding: 0;
+                margin-bottom: 65pt;
+				line-height: 0;
+          }  
+  
+        -------------
+        
+        
+         .flname  a{
+             text-decoration: none;
+             font-size: 13pt;
+             padding: 7pt;
+             font-family: 'Quarion';
+             color: rgb(254, 254, 254);
+             background-color:rgb(167, 146, 146) ;
+             border-radius: 5%;
+          } 
+
+          .popup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            overflow: hidden;
+            transition: .64s ease-in-out;
+          }
+
+          .popup-inner {
+            position: relative;
+            bottom: -100vw;
+            right: -100vh;
+            display: flex;
+            align-items: center;
+            max-width: 800px;
+            max-height: 600px;
+            width: 60%;
+            height: 70%;
+            background-color: #fff;
+            transform: rotate(32deg);
+            transition: .64s ease-in-out;
+          }
+          
+          .popupphoto {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 140%;
+            height: 100%;
+            margin-bottom: 50pt;
+            margin-left: 20pt;
+            overflow: hidden;
+          }
+          .popupphoto img {
+            width: auto;
+            height: 100%;
+          }
+
+          .popuptext {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            height: 100%;
+            padding: 4rem;
+          }
+          .popuptext h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: #0A0A0A;
+          }
+          
+          .popuptext p {
+            font-size: .875rem;
+            color: #686868;
+            line-height: 1.5;
+          }
+           
+          .popuptext a {
+           text-decoration: none;
+           color:  #47BDFF;
+          }
+          .popup:target {
+            visibility: visible;
+            opacity: 1;
+          }
+          .popup:target .popup-inner {
+            bottom: 0;
+            right: 0;
+            transform: rotate(0);
+          }
+          .closepopup {
+            position: absolute;
+            right: -1rem;
+            top: -1rem;
+            width: 3rem;
+            height: 3rem;
+            font-size: .875rem;
+            font-weight: 300;
+            border-radius: 100%;
+            background-color: #9fcde7;
+            z-index: 4;
+            color: rgb(255, 255, 255);
+            line-height: 3rem;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+          }
+
+          ------------
+
+          .last{
+              height: 60vh;
+          }
+
+          .lastdiv{
+            width: 1460px;   
+            height: 60vh;
+            box-sizing: border-box;  
+            position:relative; 
+            background-color:rgb(245, 244, 249);
+            overflow-x: hidden; 
+          }
+        
+
+          #btnemail{
+              left: 45%;
+              font-family: roboto;
+              font-size: 20pt;
+              position: relative;
+              margin-top: 27pt;
+              padding: 0 32px;
+              background-color: transparent;
+              border-radius: 10%;  
+          }
+
+          button a
+          {
+              text-decoration: none;
+              color: black;
+          }  
+
+          .icon{
+              position: relative;
+              top: 20%;
+          }
+          
+         .icon .get{
+              margin-top:-3%;
+              position: relative;  
+              left: 43%;
+          } 
+
+         .msg{
+              left:45%;
+              margin-top: 10pt;
+          }
+
+          .icon h1{
+              font-size: 23pt;  
+          }
+
+          .icon h5{
+              font-size: 15pt;
+              font-family: roboto;  
+              left: 40%;
+              position: relative;
+          }
+
+          .icon img{
+              display: flex;
+              justify-content: center;
+              position: relative;
+              left: 47%;
+              margin-bottom: 0pt;
+          }
+
+          .final{
+              height: 40vh;
+          }
+
+          .finaldiv{
+            width: 1460px;   
+            height: 40vh;
+            box-sizing: border-box;  
+            position:relative; 
+            background-color: rgb(116, 126, 156);;
+          }
+
+          .links{
+              position:relative;
+              left: 43%;
+              top: 15%;
+          }
+
+          .takemeback{
+              position: relative;
+              left: 46.6%;
+              top: 30%;
+          }
+
+          .takemeback{
+            position: relative;
+            left: 46.6%;
+            top: 30%;
+        }
+        #bring{  
+            visibility: hidden;
+            font-size: 10pt;
+            font-family: roboto; 
+            left: -4%;
+            position: relative;
+        }
+
+        .takemeback:hover,#bring::after{ 
+             visibility: initial;
+        }
+        
+        #ls{  
+            font-size: 10pt;
+            font-family: roboto; 
+            left: 40%;
+            top: 39%;
+            position: relative;
+
+        }
