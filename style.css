@@ -102,7 +102,7 @@ nav{
 nav ul{       
     position:absolute; 
     overflow: hidden;     
-    right: 30% ;
+    right: 38% ;
     top: 5%;
     transform: translate(100%, 0%);
 }
@@ -154,7 +154,7 @@ nav a{
     .arrow{
         position:absolute;
         top: 70%;
-        left:  50%; 
+        left:  49%; 
         animation: slide1 2s ease-in-out infinite; 
     }
      
@@ -257,6 +257,15 @@ nav a{
         margin-top: 10%; 
         margin-right:7%;
     }  
+
+    #desc{
+        font-family: 'Quarion';
+        font-size: 12pt;    
+        margin-top: 20pt;
+        left: 38%;
+        position: relative;
+    }  
+
     .p3h1{
         left: 20%; 
         font-size: 25pt;
@@ -385,10 +394,10 @@ nav a{
               display: flex;
               align-items: center;
               overflow-x: hidden;
-          }      
+          }    
 
-          .gallery{
-              height: 110vh;
+          #gallery{
+              height: 160vh
           }
  
           .gh1{
@@ -440,11 +449,46 @@ nav a{
 				padding: 0;
                 margin-bottom: 65pt;
 				line-height: 0;
+          }   
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease; 
+                background: white;
+            }
+             
+            .text {
+                color: black;
+                font-size: 18px;
+                position: absolute;
+                font-family: 'Quarion';
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            } 
+
+          .gallery ul li a:hover .overlay{ 
+            opacity: 0.8;
+            transition: ease-out 0.5s;   
           }  
-  
+
+          .gallery ul li a:hover .text{ 
+            opacity: 1; 
+          }  
+          
+          
         -------------
-        
-        
+         
          .flname  a{
              text-decoration: none;
              font-size: 13pt;
@@ -491,7 +535,7 @@ nav a{
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            width: 140%;
+            width: 150%;
             height: 100%;
             margin-bottom: 50pt;
             margin-left: 20pt;
@@ -506,7 +550,7 @@ nav a{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 60%;
+            width: 90%;
             height: 100%;
             padding: 4rem;
           }
@@ -516,12 +560,15 @@ nav a{
             margin-bottom: 2rem;
             text-transform: uppercase;
             color: #0A0A0A;
+            bottom: 10%;
           }
           
           .popuptext p {
             font-size: .875rem;
             color: #686868;
-            line-height: 1.5;
+            line-height: 1.5; 
+            position: relative;
+            bottom: 10%;
           }
            
           .popuptext a {
@@ -572,7 +619,7 @@ nav a{
         
 
           #btnemail{
-              left: 45%;
+              left: 44%;
               font-family: roboto;
               font-size: 20pt;
               position: relative;
@@ -590,28 +637,26 @@ nav a{
 
           .icon{
               position: relative;
-              top: 20%;
-          }
-          
+              top: 20%; 
+          }  
          .icon .get{
               margin-top:-3%;
               position: relative;  
-              left: 43%;
+              left: 42%;
           } 
 
-         .msg{
-              left:45%;
+         .msg{ 
               margin-top: 10pt;
-          }
-
+          }  
           .icon h1{
-              font-size: 23pt;  
+              font-size: 20pt;  
+              left: 0.5%;
           }
 
           .icon h5{
-              font-size: 15pt;
+              font-size: 12pt;
               font-family: roboto;  
-              left: 40%;
+              left: 41.5%;
               position: relative;
           }
 
@@ -645,23 +690,17 @@ nav a{
               position: relative;
               left: 46.6%;
               top: 30%;
-          }
-
-          .takemeback{
-            position: relative;
-            left: 46.6%;
-            top: 30%;
-        }
-        #bring{  
-            visibility: hidden;
+          } 
+        #bring{   
+            opacity: 0;
             font-size: 10pt;
             font-family: roboto; 
             left: -4%;
             position: relative;
         }
 
-        .takemeback:hover,#bring::after{ 
-             visibility: initial;
+        .takemeback .img:hover .bring { 
+            opacity: 1;
         }
         
         #ls{  
