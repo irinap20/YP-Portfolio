@@ -2,41 +2,53 @@
     <div id="wrapper">
         <body> 
     <head>
-        <title>something</title>
-        <link rel = "stylesheet" href="style.css">
+        <title>Yunyi Park | Personal Website</title>
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="style.css"> 
     </head> 
    <section id="page1"> 
-            <div class="container"> 
-                <div class="navbar">
-                    <div class ="logo">
-                        <ul id= "menu">
-                            <li>
-                                <p id="logo-name"> yp </p> 
-                            </li>
+            <div class="container">  
+                   <section class= "header"> 
+                       <nav> 
+                       <header> 
+                           <a href="" class = "logo" >YUNIPARK</a>
+                        <ul class = "menu"> 
+                            <li class = "link"><a  href="" >Home</a></li>
+                            <li class = "link"><a  href="#page2">About</a></li> 
+                            <li class = "link"><a   href="#page3">Experience</a></li>
+                            <li class = "link"><a  href="#b">Resume</a></li>
+                            <li class = "link"><a  href="#gallery">Projects</a></li>  
                         </ul> 
-                    </div>
-                    <section class = "specs" id = "specs">
-                    <nav>
-                            <ul id ="menu">
-                                <li><a href="">Home</a></li>
-                                <li><a href="">About</a></li> 
-                                <li><a href="">Experience</a></li>
-                                <li><a href="">Projects</a></li>  
-                            </ul> 
-                    </nav> 
+                       </header> 
+                       <script>
+                         function mobileMenu() { 
+                            const hamburger = document.getElementById('hamburger');
+                            const menu = document.getElementByClassName('menu');  
+                                hamburger.classList.toggle("active");
+                                menu.classList.toggle("active");
+                            }    
+                       </script>
+                       <button id="hamburger" onclick='mobileMenu()'>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                       </button>
+                    </nav>
                 </section> 
-                <script src="app.js"></script>
-                </div>  
-                
-        <div class="arrow" >
-            
-            <span><a href="nextpage2"></a> </span>   
+                <script src="app.js"></script> 
+         <section id = "arrow"> 
+        <div class="arrow"> 
+            <span> </span>  
         </div> 
+         </section>
+        <div class= "intro">  
                 <svg width="100%" height="100%" class="hey">
                     <text x="53%" y="57%"  text-anchor="middle"  id="intro">
                         Hi,  I'm Yunyi  
                       </text> 
                 </svg>  
+            </div>
+        </div>
     </section>    
             <section id="page2"> 
                 <div class="nextpage2"> 
@@ -49,7 +61,7 @@
                             <div class= "description" style="width:800px;height: 500px;">
                                 <ul class = "uls">
                                    <li> 
-                                    Hey! My name is Yunyi (pronounced yooni) and I am a second-year student at Northeastern University pursuing a degree in Computer Science and Cognitive Psychology.
+                                    Hey! My name is Yunyi (pronounced yuni) and I am a second-year student at Northeastern University pursuing a degree in Computer Science and Cognitive Psychology.
                                  </li>  
                                  <br \>
                                    <li> 
@@ -131,43 +143,62 @@
         </div> 
     </div>  
 </section>   
- <section class="b">
+ <section id="b">
+     <div class = "b"> 
      <div class="bridge"> 
          <div class="checkout"> <h3 >Check Out My Resume</h3>   
          </div> 
          <div class="btns">
              <button class="grab" id="getCopy">Grab a Copy</button>
          </div>
+        </div>
      </div>
  </section>  
-<section class="gallery">
+<section id="gallery">
+    <div class = "gallery"> 
     <h1 class="gh1"> Projects </h1>
+    <h2 id = "desc">Click the images to see description</h2>
 	<div class="row">
 		<ul>
 			<a href="#" class="close"></a>
 			<li class="sc">
 				<a style="margin-bottom: 0%; " href="#popup">
-					<img  src="img/sc.png"  style="width:600; height:300;" alt="">
+					<img  src="img/sc.png"  style="width:600; height:300;" alt=""> 
+                    <div class="overlay">
+                        <div class="text">Carbon Footprint Calculator</div>
+                    </div>
 				</a>
 			</li> 
-			<li >
-				<a href="#item02">
-					<img src="img/img.png" style="width:700; height:300p;"  alt="">
+			<li class = "sc">
+				<a href="#popup2">
+					<img src="img/img.png" style="width:700; height:300p;"  alt=""> 
+                    <div class="overlay">
+                        <div class="text">Image Processor</div>
+                      </div>
 				</a>
 			</li> 
-			<li  style="margin-top: -5%;">
-				<a   href="#item02">
-					<img  id = "f" src="img/floodit.png " style="width:600; height:400px;"  alt="">
+			<li  class = "sc" style="margin-top: -5%;">
+				<a   style="margin-bottom: 0%; " href="#popup3">
+					<img  id = "f" src="img/floodit.png " style="width:600; height:400px;"  alt=""> 
+                    <div class="overlay">
+                        <div class="text">FloodIt!</div>
+                      </div>
 				</a>
 			</li>   
-			<li>
-				<a calss="image2"  href="#item02">
-					<img src="img/mz.png " style="width:400; height:400;"  alt="">
+			<li class = "sc">
+				<a  href="#popup4">
+					<img src="img/mz.png " style="width:400; height:400;"  alt=""> 
+                    <div class="overlay">
+                        <div class="text">MazeGame</div>
+                      </div>
 				</a>
 			</li> 
-            <li>
-				<a class="image3" href="#popup2">
-					<img id ="mm" src="img/mastermind.png" style="width: 275; height:400" alt="">
+            <li class = "sc">
+				<a  href="#popup5">
+					<img id ="mm" src="img/mastermind.png" style="width: 275; height:400" alt=""> 
+                    <div class="overlay">
+                        <div class="text">Mastermind</div>
+                      </div>
 				</a>
 			</li>  
 		</ul>
@@ -176,40 +207,82 @@
 	<div class="popup" id="popup">
         <div class="popup-inner">
             <div class="popupphoto">
-                <img src="img/mazegame.gif" style="width:450; height:450" alt="">
+                <img src="img/homepage.png" style="width:450; height:300; position:relative; bottom: 70px" alt="">
             </div>
         <div class="popuptext">
-            <h1>MAZEGAME</h1>
+            <h1>Carbon Footprint Calculator</h1>
             <p>Webdevtrick is a blog for web designer and developers. We share example of simple web programs with source code. Simple programs make different this blog from others, because others share advanced program. And advance program maybe difficult for beginners.</p>
         </div>
     <a class="closepopup" href="#page4">X</a>
-  </div>  
+  </div>   
+  </div>
 
   <div class="popup" id="popup2">
+    <div class="popup-inner">
+        <div class="popupphoto">
+            <img src="img/mosaic.png" style="width:450; height:450" alt="">
+        </div>
+    <div class="popuptext">
+        <h1>Image Processor</h1>
+        <p>Webdevtrick is a blog for web designer and developers. We share example of simple web programs with source code. Simple programs make different this blog from others, because others share advanced program. And advance program maybe difficult for beginners.</p>
+    </div>
+<a class="closepopup" href="#page4">X</a>
+</div>    
+</div>
+ 
+<div class="popup" id="popup3">
+    <div class="popup-inner">
+        <div class="popupphoto">
+            <img src="img/floodit.gif" style="width:400; height:300; position:relative; bottom: 20px; left: 10px;" alt="">
+        </div>
+    <div class="popuptext">
+        <h1>FloodIt! </h1>
+        <p>Webdevtrick is a blog for web designer and developers. We share example of simple web programs with source code. Simple programs make different this blog from others, because others share advanced program. And advance program maybe difficult for beginners.</p>
+    </div>
+<a class="closepopup" href="#page4">X</a>
+</div>    
+</div>
+
+<div class="popup" id="popup4">
     <div class="popup-inner">
         <div class="popupphoto">
             <img src="img/mazegame.gif" style="width:450; height:450" alt="">
         </div>
     <div class="popuptext">
-        <h1>MAZEGAME</h1>
+        <h1>MazeGame </h1>
         <p>Webdevtrick is a blog for web designer and developers. We share example of simple web programs with source code. Simple programs make different this blog from others, because others share advanced program. And advance program maybe difficult for beginners.</p>
     </div>
 <a class="closepopup" href="#page4">X</a>
-</div>  
+</div>    
+</div>
+
+
+<div class="popup" id="popup5">
+    <div class="popup-inner">
+        <div class="popupphoto">
+            <img src="img/mastermindwin.gif" style="width:300; height:450; position:relative; right:50px; " alt="">
+        </div>
+    <div class="popuptext">
+        <h1>Mastermind</h1>
+        <p>Webdevtrick is a blog for web designer and developers. We share example of simple web programs with source code. Simple programs make different this blog from others, because others share advanced program. And advance program maybe difficult for beginners.</p>
+    </div>
+<a class="closepopup" href="#page4">X</a>
+</div>    
+</div>
 
 	</div> <!-- / Item 02 -->
-
+</div>
 </section> <!-- / projects --> 
 
 <section class="last">
 <div class="lastdiv">
 <div class="icon"> 
-    <img src="img/paperplane.svg" style="width: 60; height: 60"  >
+    <img src="img/paperplane.svg" style="width: 60; height: 60; left:46.5%"  >
     <div class="get">
         <h1>GET IN TOUCH!</h1> 
     </div> 
     <div class="msg"> 
-        <h5>Feel free to shoot me an email</a>! </p></h5>
+        <h5>Feel free to shoot me an email!</h5>
     </div>
     <div class="btnemail">
         <button id="btnemail">
@@ -232,7 +305,9 @@
 
         <div class="takemeback">
             <a href="#page1"> <img src="img/rocket.png" style="width: 70;height: 70;"> </a> 
-            <p id="bring">Bring me back to the first page!</p>
+            <div class = "bring">
+                <p id="bring">Bring me back to the first page!</p>
+            </div> 
         </div>
         <p id="ls">©Proudly made from scratch by Yunyi Park</p>
     </div>
