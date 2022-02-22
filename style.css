@@ -49,81 +49,196 @@ html, body {
     opacity: 0.7;
     background-color: black;
 }
-
-#logo-name{
-    font-size: 20pt;
-    font-family: 'Rozha One', serif;  
-    font: weight -100px; 
-}
+ 
 
 .container{
     height:100vh;
     width: inherit;  
     padding-left: 5%;
     padding-right:5%;
-    content: "";
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,  url('img/pls.jpg');
+    content: "";  
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) ,  url('img/pls.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
     box-sizing: border-box;  
     position:relative;
     overflow:hidden;
-} 
+    margin: 0 auto;
+}  
 
-.navbar{ 
-    height: 20vh;   
-    align-items: left;   
-    width:960px;
-}
-
-#menu{ 
-  position:fixed;  
-  z-index:1; /*Add this*/ 
-}
-
-.logo{
-    width:  60px;
-    cursor:pointer; 
-    position: absolute;    
+.header header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
     display: flex;
-    justify-content: flex;  
-    color: white; 
-    top: 2%;
-    transform: translate(0%, 80%);
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px;
+    z-index: 5;
 }
 
-nav{ 
-    padding-right: 60px;     
-    max-height: 1000px;      
-    width: 960px;;
+.header header .logo{
+    position:fixed; 
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vmin;  
+    font-family: system, -apple-system, BlinkMacSystemFont, sans-serif; 
+    font: weight -100px;  
+    transition: 0.6s; 
+    top:2.7vh;
+    margin-right: 2vh;
+    left: 4vh;
 }
  
-nav ul{       
-    position:absolute; 
-    overflow: hidden;     
-    right: 38% ;
-    top: 5%;
-    transform: translate(100%, 0%);
+.header header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    padding: 0;
+    list-style-type: none;
 }
 
-nav ul li{  
-   list-style: none;
-   margin: 0px 20px;  
-   display: inline-block;
+.header header ul li{
+    position: relative; 
+    list-style: none; 
+    margin-left: 13vw;    
 }
 
-nav a{
-    text-align: right;
+.header header.sticky{
+    padding: 5 px 10px;  
+    background: white;   
+    box-shadow: black;
+}
+
+header ul li a{
+    position: relative; 
     text-decoration: none;
-    color:  white;
-    font-size: 15px; 
-    font-family: 'Quarion', serif; 
- }
-
- nav.dark a {
-    color: black;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 100px;
+    font-size: 1.5vmin;
+    text-transform: uppercase;
+    font-family: system, -apple-system, BlinkMacSystemFont, sans-serif; 
+    transition: 0.6s; 
 }
+ 
+.header header ul li a::after{ 
+    position: absolute; 
+    content: "";
+    height: 1px;
+    width: 0%; 
+    left: 50%;
+    bottom: -10px ;
+    background: rgb(255, 255, 255);
+    transition: 0.4s ease-out;
+} 
+.header header ul li a:hover::after{  
+    left: 0;
+    width: 100%; 
+} 
+
+.header header.sticky a{ 
+    color:rgb(0, 0, 0);
+} 
+ 
+#hamburger {
+    display: none;
+    background-color: transparent;
+    box-shadow: transparent;
+    border-style: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    header ul li a{  
+        color: rgb(0, 0, 0);  
+    } 
+
+    header ul li {  
+       position: relative;
+       left: -5%; 
+    } 
+    .menu { 
+        display: none;
+        position: fixed;
+        left: -100%;
+        top: 3.3rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%; 
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05); 
+        height: 30%;
+    }
+
+    .menu.active { 
+        left: 0%;
+    }
+    .menu li{  
+        position: relative;
+        margin-bottom: -25pt;
+        padding: 5pt;
+        top: -20%;
+    }
+
+    .header header ul li a::after{ 
+        position: absolute; 
+        content: "";
+        height: 1px;
+        width: 0%; 
+        left: 50%;
+        bottom: -10px ;
+        background: rgb(0, 0, 0);
+        transition: 0.2s ease-out;
+    } 
+    .header header ul li a:hover::after{  
+        left: 0;
+        width: 100%; 
+    }  
+    .header header{
+        height:2%;
+    }  
+
+    .link{
+        margin: 2.5rem 0;
+    }
+
+    #hamburger {
+        display: block;
+        position: fixed;
+        left: 93%;
+        top: 3%;
+        cursor: pointer;
+    }   
+
+    #hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    } 
+}
+
 
  svg {
      position: absolute; 
@@ -154,20 +269,9 @@ nav a{
     .arrow{
         position:absolute;
         top: 70%;
-        left:  49%; 
-        animation: slide1 2s ease-in-out infinite; 
-    }
-     
-    @keyframes slide1{
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-      
-        50% {
-          transform: translate(0px, 10px);
-        }
-    }
+        left:  49%;  
+    } 
+
     .arrow span{
         display: block;
         width: 30px;
@@ -180,10 +284,7 @@ nav a{
         left:50% 
     }  
  
-     -------------
-.page2{ 
-    height:70vh;
-}
+     ------------- 
     .nextpage2{   
         height: 100vh;;
     width: inherit;  
@@ -691,18 +792,13 @@ nav a{
               left: 46.6%;
               top: 30%;
           } 
-        #bring{   
-            opacity: 0;
+        #bring{    
             font-size: 10pt;
             font-family: roboto; 
             left: -4%;
             position: relative;
         }
-
-        .takemeback .img:hover .bring { 
-            opacity: 1;
-        }
-        
+ 
         #ls{  
             font-size: 10pt;
             font-family: roboto; 
