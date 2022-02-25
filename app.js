@@ -6,9 +6,7 @@
    header.classList.toggle("sticky", window.scrollY > 0);
    bar.classList.toggle("sticky", window.scrollY>0);
    burger.classList.toggle("sticky", window.scrollY>0);
- }) 
- 
- 
-  
+ })  
 
-  
+ 
+ 
