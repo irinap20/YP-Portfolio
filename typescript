@@ -1,0 +1,14 @@
+Script started on Sun Jun 20 21:59:13 2021
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004h--script[?2004l
+zsh: command not found: -script
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004h--interactive[?2004l
+zsh: command not found: -interactive
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004h--jar   -  jjava -jar HelloWorld.jar -interactive[?2004l
+Exception in thread "main" java.lang.IllegalArgumentException: Invalid commands.
+	at Main.main(Main.java:45)
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004hjjava -jarHell     HelloWorld.jar[?2004l
+Exception in thread "main" java.lang.IllegalArgumentException: Invalid commands.
+	at Main.main(Main.java:45)
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004h--interactive[?2004l
+zsh: command not found: -interactive
+[1m[7m%[27m[1m[0m                                                                                                                                                                      [0m[27m[24m[Jirinaparky@bag-yun-is-MacBook-Pro HelloWorld % [K[?2004h- jja

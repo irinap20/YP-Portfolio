@@ -1,0 +1,3 @@
+res/image1blur.jpeg
+res/image1greyscale.jpeg
+res/image1sharpen.jpeg
